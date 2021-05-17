@@ -1,0 +1,394 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*盒子模型设定*/
+	box-sizing: border-box;
+}
+
+.header{
+	width: 100%;
+	height: 140px;
+}
+.header .header1{
+	width: 100%;
+	height: 40px;
+	background-color: #333;
+	display: flex;
+	align-items: center;/* 竖直居中 */
+	
+}
+.header1_1{
+	width: 1226px;
+	font-size: 12px;
+	margin: 0 auto;
+}
+.headerwork{
+	float: right;
+}
+.header .header1 .btn{
+	margin: 2px;
+	padding: 0px;
+	color: #b0b0b0;
+	line-height: 40px;
+}
+.shopcar{
+	margin-right: 10px;
+	width: 120px;
+	height: 40px;
+	background-color: #424242;
+	
+}
+.header1_2{
+	width: 1226px;
+	height: 100px;
+	margin: 0 auto;
+	line-height: 100px;
+	font-size: 16px;
+	color: #333;
+	display: flex;
+}
+.header1_2 .header-logo{
+	width: 62px;
+	height: 100px;
+}
+.header1_2 .header-nav{
+	width: 850px;
+	height: 100px;
+}
+.header-nav a{
+	text-decoration: none;
+	color: #333;
+	margin: 3px;
+}
+.header-nav .nav_a1{
+	margin-left: 400px;
+}
+.header1_2 .header-search{
+	width: 296px;
+	height: 100px;
+	line-height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.inputsearch{
+	padding: 4px;
+	width: 245px;
+	height: 50px;
+	border:1px solid #e0e0e0;
+	outline: none;
+}
+.inputsearch:hover{
+	border-color: #b0b0b0
+}
+
+.btnsearch{
+	width: 52px;
+	height: 50px;
+	line-height: 50px;
+	border:1px solid #e0e0e0;
+}
+.btnsearch .icon-search{
+	font-size: 30px;
+	margin-left: 10px;
+}
+.header-search  button{
+	text-decoration: none;
+	color:#333;
+	background-color: white;
+	width: 60px;
+}
+.header-search  button:hover{
+	background-color: orange;
+	color: white;
+}
+.header-search span{
+	position: relative;
+	right: 5px;
+}
+/* 轮播图 */
+.lunbotu{
+	margin: 0 auto;
+	width: 1226px;
+	height: 460px;
+}
+/* 轮播图下的小方块 */
+.lunbotu_list{
+	margin: 10px auto;
+	width: 1226px;
+	height: 170px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.lunbotu_list a img{
+	width: 300px;
+	height: 170px;
+}
+.lunbotu_list a img:hover{
+	z-index: 2; /*设置在顶层显示*/
+	-webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);    /*添加阴影*/
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+	-webkit-transform: translate3d(0, -2px, 0);     /*向上浮动*/
+	transform: translate3d(0, -2px, 0);
+}
+/* 主页面 */
+/*********************************** *************************手机部分 *************************************************************/
+.page-main{
+	width: 100%;
+	background-color:#f5f5f5 ;
+	margin-top: 30px;
+}
+.phone{
+	width: 1226px;
+	margin: 0 auto;
+}
+.phonebanner{
+	margin: 0 auto;
+	width: 1226px;
+	height: 120px ;
+	background-image: url(../img/banner1.png);
+}
+.phonetitle{
+	margin-top: 20px;
+	width: 1226px;
+	height: 58px;
+	font-size: 22px;
+	line-height: 58px;
+}
+.phone .readmore{
+	text-decoration: none;
+	color: #424242;
+	float: right;
+	font-size: 16px;
+}
+.phonelist{
+	width: 1226px;
+	height: 628px;
+	display: flex;
+}
+.phonelist .phonelist1 img{
+	height: 614px;
+}
+.phonelist .phonelist2{
+	height: 614px;
+	margin-left: 10px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+.phonelist .phonelist2 .phone{
+	width: 234px;
+	height: 300px;
+	background-color: white;
+	margin: 0px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 14px;
+}
+.phonelist .phonelist2 .phone .pic{
+	width: 160px;
+	height: 160px;
+}
+.phonelist .phonelist2 .phone a{
+	text-decoration: none;
+}
+.phonelist .phonelist2 .phone .name{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	width: 214px;
+	height: 21px;
+	font-weight: 400;
+	color: #333
+}
+.phonelist .phonelist2 .phone .introduction{
+	margin-top: 0px;
+	width: 214px;
+	height: 18px;
+	font-size: 12px;
+	color: #b0b0b0;
+}
+.phonelist .phonelist2 .phone .price{
+	margin-top: 10px;
+	width: 214px;
+	height: 21px;
+	color: #ff6700;
+}
+.phonelist .phonelist2 .phone:hover{
+	z-index: 2; /*设置在顶层显示*/
+	-webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);    /*添加阴影*/
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+	-webkit-transform: translate3d(0, -2px, 0);     /*向上浮动*/
+	transform: translate3d(0, -2px, 0);
+}
+.phonelist .phonelist1:hover{
+	z-index: 2; /*设置在顶层显示*/
+	-webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);    /*添加阴影*/
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+	-webkit-transform: translate3d(0, -2px, 0);     /*向上浮动*/
+	transform: translate3d(0, -2px, 0);
+}
+/*********************************** *************************家电部分 *************************************************************/
+.appmodule{
+	width: 1226px;
+	margin: 0 auto;
+}
+.appmodule .appbanner{
+	margin: 15px auto;
+	
+	width: 1226px;
+	height: 120px ;
+	background-image: url(../img/banner2.png);
+}
+
+.appmodule .apptitle{
+	margin-top: 20px;
+	width: 1226px;
+	height: 58px;
+	font-size: 22px;
+	line-height: 58px;
+}
+.appmodule .apptitle .readmore{
+	text-decoration: none;
+	color: #424242;
+	float: right;
+	font-size: 16px;
+}
+.appmodule .applist{
+	width: 1226px;
+	height: 614px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+.appmodule .applist .app{
+	width: 234px;
+	height: 300px;
+	background-color: white;
+	margin: 0px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 14px;
+}
+.appmodule .applist .app .pic{
+	width: 160px;
+	height: 160px;
+}
+.appmodule .applist .app a{
+	text-decoration: none;
+}
+.appmodule .applist .app .name{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	width: 214px;
+	height: 21px;
+	font-weight: 400;
+	color: #333
+}
+.appmodule .applist .app .introduction{
+	margin-top: 0px;
+	width: 214px;
+	height: 18px;
+	font-size: 12px;
+	color: #b0b0b0;
+}
+.appmodule .applist .app .price{
+	margin-top: 10px;
+	width: 214px;
+	height: 21px;
+	color: #ff6700;
+}
+.appmodule .applist .app:hover{
+	z-index: 2; /*设置在顶层显示*/
+	-webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);    /*添加阴影*/
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+	-webkit-transform: translate3d(0, -2px, 0);     /*向上浮动*/
+	transform: translate3d(0, -2px, 0);
+}
+/*********************************** *************************配件模块 *************************************************************/
+.partsmodule{
+	width: 1226px;
+	margin: 0 auto;
+}
+.partsmodule .partsbanner{
+	margin: 15px auto;
+	width: 1226px;
+	height: 120px ;
+	background-image: url(../img/banner3.png);
+}
+.partsmodule .partstitle{
+	margin-top: 20px;
+	width: 1226px;
+	height: 58px;
+	font-size: 22px;
+	line-height: 58px;
+}
+.partsmodule .partstitle .readmore{
+	text-decoration: none;
+	color: #424242;
+	float: right;
+	font-size: 16px;
+}
+.partsmodule .partslist{
+	width: 1226px;
+	height: 614px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+.partsmodule .partslist .app{
+	width: 234px;
+	height: 300px;
+	background-color: white;
+	margin: 0px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 14px;
+}
+.partsmodule .partslist .app .pic{
+	width: 160px;
+	height: 160px;
+}
+.partsmodule .partslist .app a{
+	text-decoration: none;
+}
+.partsmodule .partslist .app .name{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	width: 214px;
+	height: 21px;
+	font-weight: 400;
+	color: #333
+}
+.partsmodule .partslist .app .introduction{
+	margin-top: 0px;
+	width: 214px;
+	height: 18px;
+	font-size: 12px;
+	color: #b0b0b0;
+}
+.partsmodule .partslist .app .price{
+	margin-top: 10px;
+	width: 214px;
+	height: 21px;
+	color: #ff6700;
+}
+.partsmodule .partslist .app:hover{
+	z-index: 2; /*设置在顶层显示*/
+	-webkit-box-shadow: 0 15px 30px rgba(0,0,0,0.1);    /*添加阴影*/
+	box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+	-webkit-transform: translate3d(0, -2px, 0);     /*向上浮动*/
+	transform: translate3d(0, -2px, 0);
+}

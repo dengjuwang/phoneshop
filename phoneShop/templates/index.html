@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>小米商城</title>
+		<link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/iconfont.css"/>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<div class="header">
+			<div class="header1">
+				<div class="header1_1">
+					<div class="headerwork">
+						<a href="" class="btn">你好！{{ username }}</a>
+						<a href="/quit/" class="btn">退出登陆</a>
+						<a href="/myorder/" class="btn">我的订单</a>
+						<a href="/shopcar/" class="btn shopcar">
+							<span class="iconfont icon-qicheqianlian-"></span>
+							购物车
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header1_2">
+				<!-- 图标 -->
+				<div class="header-logo">
+					
+				</div>
+				<!-- 导航栏 -->
+				<div class="header-nav">
+					<a href="/index/" class="nav_a1">商城</a>
+					<a href="/choose/?pk=3">小米</a>
+					<a href="/choose/?pk=2">华为</a>
+					<a href="/choose/?pk=1">苹果</a>
+					<a href="/choose/?pk=4">oppo</a>
+					<a href="/choose/?pk=5">vivo</a>
+					<a href="/choose/?pk=7">其他</a>
+				</div>
+				<!-- 搜索框 -->
+                <form action="" method="post">
+				<div class="header-search">
+					<input class="inputsearch" type="" name="phone" id="" value="" placeholder="手机"/>
+                    <button style="outline: none" type="submit"class="btnsearch">
+							<span class="iconfont icon-search "></span>
+					</button>
+				</div>
+                </form>
+			</div>
+		</div>
+		<!-- 轮播图 -->
+		<div id="carousel-example-generic" class="carousel slide lunbotu" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="4"></li>
+		  </ol>
+		
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active">
+		      <a href="/good/?pk=3"><img src="../static/img/lun1.png" alt="..."></a>
+		    </div>
+		    <div class="item">
+			   <a href="/good/?pk=3"><img src="../static/img/lun2.png" alt="..."></a>
+		    </div>
+		    <div class="item">
+		      <a href="/good/?pk=3"><img src="../static/img/lun3.png" alt="..."></a>
+		    </div>
+			<div class="item">
+			  <a href="/good/?pk=3"><img src="../static/img/lun4.png" alt="..."></a>
+			</div>
+			<div class="item">
+			  <a href="/good/?pk=3"><img src="../static/img/lun5.png" alt="..."></a>
+			</div>
+		  </div>
+		
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+		<!-- 轮播图下面的四个小方块 -->
+		<div class="lunbotu_list">
+			<a href="/good/?pk=3"><img src="../static/img/list1.png" ></a>
+			<a href="/good/?pk=3"><img src="../static/img/list2.png" ></a>
+			<a href="/good/?pk=3"><img src="../static/img/list3.png" ></a>
+			<a href="/good/?pk=3"><img src="../static/img/list1.png" ></a>
+		</div>
+		<!-- 主页面 -->	
+		<div class="page-main"> 
+			<!-- 手机 -->
+			<div class="phone">
+				<div class="phonebanner">					
+				</div>
+				<div class="phonetitle">
+					小米
+					<a class="readmore" href="/choose/?pk=3" >查看全部<span class="glyphicon glyphicon-chevron-right"></span></a>
+				</div>
+				<div class="phonelist">
+					<div class="phonelist1">
+						<a href=""><img src="../static/img/bigphone.png" ></a>
+					</div>
+					<div class="phonelist2">
+						{% for product in all_mi%}
+							<div class="phone ">
+								<a href="/good/?pk={{ product.pro_id  }}">
+									<img class="pic" src="../static/{{ product.pro_img }}" >
+									<p class="name">{{ product.pro_name }}</p>
+									<p class="introduction">{{product.pro_description}}</p>
+									<p class="price">{{product.pro_price}}元起</p>
+								</a>
+							</div>	
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<!--华为 -->
+			<div class="appmodule">
+				<div class="appbanner">
+					
+				</div>
+				<div class="apptitle">
+					华为
+					<a class="readmore" href="/choose/?pk=2" >查看全部<span class="glyphicon glyphicon-chevron-right"></span></a>
+				</div>
+
+				<div class="applist">
+                    {% for huawei in all_huawei%}
+					<div class="app">
+						<a href="/good/?pk={{ huawei.pro_id  }}">
+							<img class="pic" src="../static/{{ huawei.pro_img }}" alt="">
+							<p class="name">{{huawei.pro_name}}</p>
+							<p class="introduction">{{huawei.pro_description}}</p>
+							<p class="price">{{huawei.pro_price}}元</p>
+						</a>
+					</div>
+                    {% endfor %}
+				</div>
+
+			</div>	
+			<!-- 配件 -->
+			<div class="partsmodule">
+				<div class="partsbanner"></div>
+				<div class="partstitle">
+					oppo
+					<a class="readmore" href="/choose/?pk=4" >查看全部<span class="glyphicon glyphicon-chevron-right"></span></a>
+				</div>
+				<div class="partslist">
+                    {% for oppo in all_oppo%}
+					<div class="app">
+						<a href="/good/?pk={{ oppo.pro_id  }}">
+							<img class="pic" src="../static/{{ oppo.pro_img }}" alt="">
+							<p class="name">{{ oppo.pro_name }}</p>
+							<p class="introduction">{{oppo.pro_description}}</p>
+							<p class="price">{{oppo.pro_price}}元</p>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<script src="../static/js/jquery.js"></script>
+		<script src="../static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	</body>
+</html>

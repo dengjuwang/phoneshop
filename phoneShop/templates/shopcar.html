@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我的购物车</title>
+		<link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/iconfont.css"/>
+		<link rel="stylesheet" href="../static/css/shopcar.css"></lin>
+	</head>
+	<body>
+		<a href="/index/"><button style="height: 40px;width: 100px;position: absolute;top: 32px;right: 340px;" class="btn-info" type="button">返回主页</button></a>
+		<div class="title">
+			<span class="myshop">我的购物车</span>
+			<span class="tip">温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</span>
+		</div>
+		<div class="shopcar">
+			<div class="shoptitle">
+				<div class="choose">选择</div>
+				<div class="img"></div>
+				<div class="name">商品名称</div>
+				<div class="price">单价</div>
+				<div class="num">数量</div>
+				<div class="allprice">小计</div>
+				<div class="caozuo">操作</div>
+			</div>
+			<div class="goodlist">
+                {% for i in product %}
+				<div class="good">
+					<div class="choose">
+						<input class="check" name="Checkbox" type="checkbox" >
+					</div>
+					<div class="img"><img src="../static/{{i.pro_img }}" ></div>
+					<div class="name">{{i.pro_name}}</div>
+					<div class="price">{{ i.pro_price }}元</div>
+					<div class="num">1</div>
+					<div class="allprice">{{ i.pro_price }}元</div>
+					<div class="caozuo">
+						<a href="/delfav/?pk={{ i.pro_id }}">
+								<span class="glyphicon glyphicon-remove"></span>				
+						</a>
+					</div>
+				</div>
+                {% endfor %}
+			</div>
+			<div class="jieusuan">
+                <a href="/rusult/"><button type="button">去结算</button></a>
+				<div>
+					合计：<span class="price">{{all_price}}</span>元
+				</div>
+			</div>
+			<div style="height: 20px;width: 10px;"></div>
+		</div>
+		
+		
+		<script src="../static/js/jquery.js"></script>
+		<script src="../static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	</body>
+</html>

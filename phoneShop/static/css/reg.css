@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*盒子模型设定*/
+	box-sizing: border-box;
+	background-color: #F9F9F9;
+}
+#reg{
+	width:854px ;
+	height: 1000px;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	margin: 100px auto;
+	align-items: center;
+	justify-content: space-around;
+}
+.c1{
+	background-color:white;
+	border: 1px black;
+	height: 100px;
+	width: 600px;
+	display: flex;
+	font-size: 25px;
+	
+}
+.c1 label{
+	line-height: 100px;
+	background-color: white;
+	margin-left: 70px;
+}
+
+.c1 input {
+	width: 400px;
+	height: 40px;
+	margin-top: 30px;
+	background-color: white;
+	border: 1px solid #E0E0E0;
+}
+.c1 select{
+	margin-top: 30px;
+	height: 40px;
+	width: 400px;
+	background-color: white;
+}
+#btnok{
+	width:330px ;
+	height: 42px;
+	background-color: #FF6700;
+	border: none;
+	color: white;
+	margin-left: 148px;
+}
+
+

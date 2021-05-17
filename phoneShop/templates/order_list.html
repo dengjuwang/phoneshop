@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/dsb.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand one-pan-link-mark" href="#">你好！管理员</a>
+        </div>
+        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li ><a href="/product_list/" class="one-pan-link-mark">商品管理</a></li>
+            <li ><a href="/user_list/" class="one-pan-link-mark">用户管理</a></li>
+            <li ><a href="/admin_list/" class="one-pan-link-mark">管理员管理</a></li>
+            <li class="active"><a href="/order_list/" class="one-pan-link-mark">订单管理</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header">订单列表</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>订单号</th>
+                            <th>订购商品名</th>
+                            <th>订购用户名</th>
+                            <th>订购时间</th>
+							<th>订单状态</th>
+                            <th>操作</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for order in order_list %}
+                            <tr>
+                                <td>{{ order.pk }}</td>
+                                <td>{{ order.order_pro.pro_name }}</td>
+                                <td>{{ order.user_name_id }}</td>
+                                <td>{{order.order_time.year }}/{{order.order_time.month}}/{{order.order_time.day}} {{order.order_time.hour }}:{{order.order_time.minute }}:{{order.order_time.second }}</td>
+								<td>{{ order.order_state.state_name }}</td>
+                                <td><a class="btn btn-danger btn-sm" href="/order_del/?pk={{ order.pk }}">取消订单</a>
+                                    <a class="btn btn-primary btn-sm"  href="/order_fahuo/?pk={{ order.pk }}">发货</a></td>
+                            </tr>
+                    {% endfor %}
+                    </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册账号</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/reg.css"/>
+	</head>
+	<body>
+    <form action="/reg/" method="post">
+		<div id="reg">
+			<div class="c1" style="font-size: 30px; color:#33333;line-height: 100px;text-align: center;">
+				<label style="margin-left: 260px;">注册账号</label>
+			</div>
+			<label style="color: red;background-color: white;">{{error}}</label>
+			<div class="c1">
+				<label >账号：</label>
+				<input type="text" id="username"placeholder="请输入账号!" name="username">
+			</div>
+			<div class="c1">
+				<label >密码：</label>
+				<input type="password" id="username"placeholder="请输入密码!"name="password">
+			</div>
+			<div class="c1">
+				<label >地址：</label>
+				<input type="text" id="username"placeholder="请输入真实地址!"name="address">
+			</div>
+			<div class="c1">
+				<label >邮编：</label>
+				<input type="text" id="username"placeholder="请输入邮编!"name="zip">
+			</div><div class="c1">
+				<label >手机：</label>
+				<input type="text" id="username"placeholder="请输入手机号!"name="phone">
+			</div>
+			<div class="c1">
+				<label >姓名：</label>
+				<input type="text" id="username"placeholder="请输入真实姓名!"name="name">
+			</div>
+			<div class="c1">
+				<label >性别：</label>
+				<select name="sex">
+				  <option value ="男">男</option>
+				  <option value ="女">女</option>
+
+				</select>
+			</div>
+			<div class="c1">
+				<label >邮箱：</label>
+				<input type="text" id="username"placeholder="请输入邮箱账号!" name="email">
+			</div>
+			<div class="c1">
+				<input type="submit" id="btnok" name="确认注册" />
+                
+			</div>
+		</div>
+     </form>
+	</body>
+</html>

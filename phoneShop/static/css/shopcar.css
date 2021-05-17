@@ -1,0 +1,158 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.title{
+	width: 1226px;
+	height: 74px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	margin-top: 30px;
+
+}
+.title .myshop{
+	font-size: 28px;
+	color: #424242;
+	margin-left: 40px;
+}
+.title .tip{
+	font-size: 12px;
+	color: #757575;
+	margin-left: 5px;
+}
+.shopcar{
+	width: 1226px;
+	background-color: #F5F5F5;
+	border-top:1px solid #FF6700;
+	width: 100%;
+}
+.shopcar div{
+	background-color: white;
+}
+.shopcar .shoptitle{
+	width: 1226px;
+	height: 70px;
+	line-height: 70px;
+	display: flex;
+	border-bottom: 1px solid #E0E0E0;
+	font-size: 14px;
+	color: #424242;
+	margin: 0 auto;
+}
+.shopcar .shoptitle .choose{
+	width: 110px;
+	text-align: center;
+}
+.shopcar .shoptitle .img{
+	width: 120px;
+	text-align: center;
+}
+.shopcar .shoptitle .name{
+	width: 380px;
+}
+.shopcar .shoptitle .price{
+	width: 158px;
+	text-align: center;
+}
+.shopcar .shoptitle .num{
+	width: 150px;
+	text-align: center;
+}
+.shopcar .shoptitle .allprice{
+	width: 201px;
+	text-align: center;
+}
+.shopcar .shoptitle .caozuo{
+	width: 80px;
+	text-align: center;
+}
+.goodlist{
+	width: 1226px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+.goodlist .good{
+
+	display: flex;
+	line-height: 117px;
+	width: 1226px;
+	height: 117px;
+	border-bottom: 1px solid #E0E0E0;
+}
+.goodlist .good .choose{
+	width: 110px;
+	text-align: center;
+
+}
+.goodlist .good .choose input{
+	zoom: 150%;
+	
+}
+.goodlist .good .choose input:checked{
+	background-color: orange;
+}
+
+
+.goodlist .good .img{
+	width: 120px;
+}
+.goodlist .good .img img{
+	width: 80px;
+	height: 80px;
+}
+.goodlist .good .name{
+	width: 380px;
+}
+.goodlist .good .price{
+	width: 158px;
+	text-align: center;
+}
+.goodlist .good .num{
+	width: 150px;
+	text-align: center;
+}
+.goodlist .good .allprice{
+	width: 201px;
+	text-align: center;
+}
+.goodlist .good .caozuo{
+	width: 80px;
+	text-align: center;
+	font-size: 20px;
+}
+.goodlist .good .caozuo a{
+	color: #E2E2E2;
+}
+.goodlist .good .caozuo a:hover{
+	color: #FF6700;
+}
+
+.jieusuan{
+	width: 1226px;
+	height: 50px;
+	line-height: 50px;
+	margin: 10px auto;
+	margin-bottom: 10px;
+	background-color: white;
+	font-size: 14px;
+	color: #FF6700;
+
+}
+.jieusuan button{
+	width: 200px;
+	height: 48px;
+	background-color: #FF6700;
+	color: white;
+	float: right;
+	border: none;
+	font-size: 18px;
+	outline: none;
+}
+.jieusuan span{
+	font-size: 30px;
+}
+.jieusuan div{
+	float: right;
+	margin-right: 50px;
+}

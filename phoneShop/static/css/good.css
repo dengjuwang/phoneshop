@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*盒子模型设定*/
+	box-sizing: border-box;
+}
+.goodtitle{
+	width: 1226px;
+	margin: 0 auto;
+	color: #424242;
+	font-size: 18px;
+}
+.gooddetails{
+	margin: 0 auto;
+	width: 1226px;
+	display: flex;
+	justify-content: space-between;
+}
+.gooddetails .goodimg img{
+	width: 560px;
+	height: 560px;
+}
+.gooddetails .goodfont{
+	width: 600px;
+}
+.gooddetails .goodfont .goodtitle{
+	width: 600px;
+	font-size: 24px;
+	color: #212121;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.gooddetails .goodfont .goodintro{
+	width: 600px;
+	font-size: 14px;
+	color: #b0b0b0;
+	margin-bottom: 10px;
+}
+.gooddetails .goodfont .goodprice{
+	font-size: 18px;
+	margin-bottom: 10px;
+	color:#FF6700 ;
+}
+.gooddetails .goodfont p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 600px;
+	font-size: 18px;
+	color: #333333;
+}
+.gooddetails .goodfont .goodcolor{
+	width: 600px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	color: #757575;
+}
+.gooddetails .goodfont .goodcolor div {
+	width: 292px;
+	height: 42px;
+	line-height: 42px;
+	font-size: 16px;
+	border: 1px solid #B0B0B0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.gooddetails .goodfont .goodcolor div:hover{
+	color: #FF6700;
+	border: 1px solid #FF6700;
+}
+
+.gooddetails .goodfont .goodcolor  .active{
+	color: #FF6700;
+	border: 1px solid #FF6700;
+}
+.gooddetails .goodfont .goodRAM{
+	width: 600px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	color: #757575;
+}
+.gooddetails .goodfont .goodRAM div {
+	width: 292px;
+	height: 42px;
+	line-height: 42px;
+	font-size: 16px;
+	border: 1px solid #B0B0B0;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.gooddetails .goodfont .goodRAM div:hover{
+	color: #FF6700;
+	border: 1px solid #FF6700;
+}
+
+.gooddetails .goodfont .goodRAM  .active{
+	color: #FF6700;
+	border: 1px solid #FF6700;
+}
+.gooddetails .goodfont .goodbuy button{
+	width: 300px;
+	height: 54px;
+	background-color:#FF6700 ;
+	color: #FFF;
+	border: none;
+	margin-top: 20px;
+}

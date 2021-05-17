@@ -1,0 +1,85 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*盒子模型设定*/
+	box-sizing: border-box;
+}
+.banner{
+	width: 1130px;
+	height: 98px;
+}
+#logo{
+	width: 200px;
+	height: 98px;
+	background-color: orange;
+	margin-left: 60px;
+}
+#index{
+	background-image: url(../img/loginindex.jpg);
+	height: 588px;
+	width: auto;
+	background-repeat: no-repeat;
+	background-size: 100%100%;
+	line-height: 588px;
+
+	
+	
+}
+#index #login{
+	width: 410px;
+	height: 588px;
+	background-color: white;
+	margin-left: 60%;
+}
+#zhanghaodenglu{
+
+	width: 410px;
+	height: 90px;
+	line-height: 80px;
+	font-size: 24px;
+	text-align: center;
+	color: #F56600;
+	margin-top: 0px;
+}
+#input{
+	width: 348px;
+	height: 114px;
+	margin: auto;
+}
+.user{
+	width: 346px;
+	height: 48px;
+	border: 1px solid #e0e0e0;
+	margin: 10px;
+}
+#input input{
+	display: flex;
+	margin-left: 13px;
+	margin-top: 16px;
+	border: 0px;
+	width: 300px;
+	height: 20px;
+	outline: none;
+}
+
+#ok{
+	display: block;
+	background-color: #FF6700;
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+	border: none;
+	color: white;
+	font-size: 14px;
+	vertical-align: middle;
+}
+#reg{
+	position: relative;
+	left: 43%;
+	bottom: 240px;
+	text-decoration: none;
+	outline: none;
+}
+#reg link{
+	color: #E0E0E0;
+}

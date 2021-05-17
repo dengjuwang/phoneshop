@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/plugins/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/dsb.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand one-pan-link-mark" href="#">你好！管理员</a>
+        </div>
+        
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/product_list/" class="one-pan-link-mark">商品管理</a></li>
+            <li ><a href="/user_list/" class="one-pan-link-mark">用户管理</a></li>
+            <li><a href="/admin_list/" class="one-pan-link-mark">管理员管理</a></li>
+            <li><a href="/order_list/" class="one-pan-link-mark">订单管理</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h2 class="sub-header">商品列表</h2>
+         <a class="btn btn-primary btn-sm" href="/book_add/">新增</a>
+          <div class="table-responsive">
+			  <form action="" enctype="multipart/form-data"  method="post">
+			  	
+			  
+            <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>商品图片</th>
+                            <th>商品名称</th>
+                            <th>商品品牌</th>
+                            <th>商品描述</th>
+							<th>商品价格</th>
+                            <th>操作</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr>
+                               <td><input style="height: 34px;" type="file" name="file" id="" value="" /></td>
+                               <td><input style="height: 34px;" type="" name="name" id="" value="" /></td>
+                               <td>
+                                   <select name="type" id="" style="height: 34px;">
+                                       {%for type in types%}
+                                           <option value="{{ type.ptype_id }}">{{ type.ptype_name }}</option>
+                                       {% endfor %}
+                                   </select>
+
+                               </td>
+                               <td><input style="height: 34px;" type="" name="des" id="" value="" /></td>
+							   <td><input style="height: 34px;" type="" name="price" id="" value="" /></td>
+                               <td><button   class="btn btn-info" type="submit">确认提交</button></td>
+                            </tr>
+                    </tbody>
+            </table>
+			</form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

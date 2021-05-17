@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>请登陆</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/login.css"/>
+	</head>
+	<body>
+		<div class="banner">
+
+		</div>
+        <form action="" method="post">
+        	
+        
+		<div id="index">
+			<div id="login">
+				<div id="zhanghaodenglu" >
+					<p>账号登陆</p>
+				</div>
+				<div id="zhanghaodenglu" style="height: 20px;">
+					<p style="font-size: 12px;color: red;position: relative;bottom: 40px;">{{error}}</p>
+				</div>
+				
+				<div id="input">
+					<div class="user">
+						<input type="text" name="username" id="username"placeholder="请输入账号">
+					</div>
+					<div class="user">
+						<input type="password" name="password" id="password"placeholder="密码">
+					</div>
+					<div class="user" style="border: none;">
+						<button type="submit" id="ok">
+							登陆
+						</button>
+					</div>
+						<a id="reg" href="/reg/">立即注册</a>
+				</div>
+			</div>
+		</div>
+		</form>
+	</body>
+</html>

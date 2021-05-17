@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>小米商城</title>
+		<link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7-dist/css/bootstrap-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/shopcar.css"/>
+	</head>
+	<body>
+		<!-- 头部 -->
+		<div class="header">
+			<div class="header1">
+				<div class="header1_1">
+					<div class="headerwork">
+						<a href="" class="btn">你好！{{ username }}</a>
+						<a href="/quit/" class="btn">退出登陆</a>
+						<a href="" class="btn">我的订单</a>
+					</div>
+				</div>
+			</div>
+			<div class="header1_2">
+				<!-- 图标 -->
+				<div class="header-logo">
+					
+				</div>
+				<!-- 导航栏 -->
+				<div class="header-nav">
+					<a href="/index/" class="nav_a1">商城</a>
+					<a href="">小米</a>
+					<a href="">华为</a>
+					<a href="">苹果</a>
+					<a href="">oppo</a>
+					<a href="">vivo</a>
+					<a href="">其他</a>
+				</div>
+				<!-- 搜索框 -->
+				<form action="" method="post">
+				<div class="header-search">
+					<input class="inputsearch" type="" name="phone" id="" value="" placeholder="手机"/>
+                    <button style="outline: none" type="submit"class="btnsearch">
+							<span class="iconfont icon-search "></span>
+					</button>
+				</div>
+                </form>
+			</div>
+		</div>
+		<div class="shopcar">
+			<div class="shoptitle">
+				<div class="choose">订单号</div>
+				<div class="img"></div>
+				<div class="name">商品名称</div>
+				<div class="price">价格</div>
+				<div class="num">下单时间</div>
+				<div class="allprice">货品状态</div>
+				<div class="caozuo">商品备注</div>
+			</div>
+			<div class="goodlist">
+                {% for i in order_data %}
+				<div class="good">
+					<div class="choose">
+						<lable>{{i.order_id}}</lable>
+					</div>
+                    <div class="img"><img src="../static/{{ i.order_pro.pro_img}}" ></div>
+					<div class="name">{{i.order_pro.pro_name}}</div>
+					<div class="price">{{i.order_pro.pro_price}}元</div>
+					<div class="num">{{i.order_time.year }}/{{i.order_time.month}}/{{i.order_time.day}} {{i.order_time.hour }}:{{i.order_time.minute }}:{{i.order_time.second }}</div>
+					<div class="allprice">{{i.order_state.state_name}}</div>
+					<div class="caozuo"style="font-size: 5px">
+						{{i.order_bz}}
+					</div>
+				</div>
+                {% endfor %}
+
+		</div>
+	</body>
+</html>
